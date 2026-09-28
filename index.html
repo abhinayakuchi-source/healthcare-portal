@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Healthcare Appointment and Patient Portal">
+        content="CarePlus Multispeciality Hospital - Healthcare Appointment and Patient Portal">
 
-    <title>CarePlus Healthcare Portal</title>
+    <title>CarePlus Multispeciality Hospital</title>
 
-    <!-- Bootstrap 5 CSS -->
+    <!-- Bootstrap 5 -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">
@@ -22,596 +23,214 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        <div class="container">
+<!-- =========================================================
+     TOP EMERGENCY BAR
+========================================================= -->
 
-            <a class="navbar-brand fw-bold" href="#home">
-                <i class="bi bi-heart-pulse-fill"></i>
-                CarePlus
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <span>
+                <i class="bi bi-clock"></i>
+                24/7 Healthcare Services
+            </span>
+
+            <span>
+                <i class="bi bi-telephone-fill"></i>
+                Emergency: +91 98765 43210
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark hospital-navbar sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#home">
+
+            <span class="brand-icon">
+                <i class="bi bi-plus-lg"></i>
+            </span>
+
+            CarePlus
+            <small>Multispeciality Hospital</small>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hospitalNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="hospitalNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#registration">
+                        Registration
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#appointments">
+                        Appointments
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#health">
+                        Health Information
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#doctors">
+                        Doctors
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">
+                        Services
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="#registration"
+               class="btn btn-light ms-lg-3 appointment-btn">
+
+                <i class="bi bi-calendar-check"></i>
+                Book Appointment
+
             </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar">
-
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNavbar">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#registration">
-                            Patient Registration
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#appointments">
-                            Appointments
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#health">
-                            Health Information
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">
-                            Services
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#technologies">
-                            Technologies
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
         </div>
-    </nav>
+
+    </div>
+
+</nav>
 
 
-    <!-- ================= HOME ================= -->
 
-    <section id="home" class="hero-section">
+<!-- =========================================================
+     HOME / HERO
+========================================================= -->
 
-        <div class="container">
+<section id="home" class="hero-section">
 
-            <div class="row align-items-center">
+    <div class="container">
 
-                <div class="col-lg-7">
+        <div class="row align-items-center">
 
-                    <span class="badge bg-light text-primary mb-3">
-                        Healthcare Appointment Portal
-                    </span>
+            <div class="col-lg-7">
 
-                    <h1 class="display-4 fw-bold">
-                        Your Health,
-                        <span class="text-primary">Our Priority</span>
-                    </h1>
+                <span class="hero-badge">
+                    <i class="bi bi-shield-check"></i>
+                    Trusted Healthcare Since 2005
+                </span>
 
-                    <p class="lead mt-3">
-                        Book your healthcare appointment easily and
-                        manage your patient information in one place.
-                    </p>
+
+                <h1>
+                    Quality Healthcare
+                    <span>Closer to You</span>
+                </h1>
+
+
+                <p class="hero-text">
+
+                    Compassionate care, experienced doctors and
+                    modern healthcare services — all in one place.
+
+                </p>
+
+
+                <div class="hero-buttons">
 
                     <a href="#registration"
-                        class="btn btn-primary btn-lg me-2">
-                        Book Appointment
+                       class="btn btn-primary btn-lg">
+
+                        <i class="bi bi-calendar-plus"></i>
+                        Book an Appointment
+
                     </a>
 
-                    <a href="#services"
-                        class="btn btn-outline-primary btn-lg">
-                        Our Services
+
+                    <a href="#doctors"
+                       class="btn btn-outline-primary btn-lg">
+
+                        <i class="bi bi-person-badge"></i>
+                        Find a Doctor
+
                     </a>
 
                 </div>
 
-                <div class="col-lg-5 text-center mt-4 mt-lg-0">
+            </div>
 
-                    <div class="hero-icon">
+
+            <div class="col-lg-5 mt-5 mt-lg-0">
+
+                <div class="hero-card">
+
+                    <div class="hero-medical-icon">
+
                         <i class="bi bi-hospital"></i>
+
                     </div>
 
-                </div>
 
-            </div>
+                    <h3>
+                        24/7 Medical Care
+                    </h3>
 
-        </div>
 
-    </section>
+                    <p>
+                        Emergency and specialist healthcare
+                        services available around the clock.
+                    </p>
 
 
-    <!-- ================= REGISTRATION ================= -->
+                    <div class="emergency-number">
 
-    <section id="registration" class="section-padding">
+                        <i class="bi bi-telephone-fill"></i>
 
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Patient Registration</h2>
-
-                <p>
-                    Fill in the details to schedule your appointment.
-                </p>
-            </div>
-
-
-            <div class="card shadow border-0">
-
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">
-                        <i class="bi bi-person-plus-fill"></i>
-                        Patient Details
-                    </h4>
-                </div>
-
-
-                <div class="card-body">
-
-                    <form>
-
-                        <!-- Personal Information -->
-
-                        <h5 class="form-heading">
-                            Personal Information
-                        </h5>
-
-                        <div class="row g-3">
-
-                            <!-- Patient Name -->
-
-                            <div class="col-md-6">
-
-                                <label for="patientName"
-                                    class="form-label">
-                                    Patient Name
-                                </label>
-
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="patientName"
-                                    placeholder="Enter patient name"
-                                    required>
-
-                            </div>
-
-
-                            <!-- Email -->
-
-                            <div class="col-md-6">
-
-                                <label for="email"
-                                    class="form-label">
-                                    Email
-                                </label>
-
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    id="email"
-                                    placeholder="example@email.com"
-                                    required>
-
-                            </div>
-
-
-                            <!-- Mobile -->
-
-                            <div class="col-md-6">
-
-                                <label for="mobile"
-                                    class="form-label">
-                                    Mobile Number
-                                </label>
-
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    id="mobile"
-                                    placeholder="Enter mobile number"
-                                    pattern="[0-9]{10}"
-                                    required>
-
-                            </div>
-
-
-                            <!-- DOB -->
-
-                            <div class="col-md-6">
-
-                                <label for="dob"
-                                    class="form-label">
-                                    Date of Birth
-                                </label>
-
-                                <input
-                                    type="date"
-                                    class="form-control"
-                                    id="dob"
-                                    required>
-
-                            </div>
-
-
-                            <!-- Gender -->
-
-                            <div class="col-md-6">
-
-                                <label for="gender"
-                                    class="form-label">
-                                    Gender
-                                </label>
-
-                                <select
-                                    class="form-select"
-                                    id="gender"
-                                    required>
-
-                                    <option value="">
-                                        Select Gender
-                                    </option>
-
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-
-                                </select>
-
-                            </div>
-
-
-                            <!-- Blood Group -->
-
-                            <div class="col-md-6">
-
-                                <label for="bloodGroup"
-                                    class="form-label">
-                                    Blood Group
-                                </label>
-
-                                <select
-                                    class="form-select"
-                                    id="bloodGroup"
-                                    required>
-
-                                    <option value="">
-                                        Select Blood Group
-                                    </option>
-
-                                    <option>A+</option>
-                                    <option>A-</option>
-                                    <option>B+</option>
-                                    <option>B-</option>
-                                    <option>AB+</option>
-                                    <option>AB-</option>
-                                    <option>O+</option>
-                                    <option>O-</option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Appointment Information -->
-
-                        <h5 class="form-heading mt-5">
-                            Appointment Information
-                        </h5>
-
-                        <div class="row g-3">
-
-                            <!-- Department -->
-
-                            <div class="col-md-6">
-
-                                <label for="department"
-                                    class="form-label">
-                                    Department
-                                </label>
-
-                                <select
-                                    class="form-select"
-                                    id="department"
-                                    required>
-
-                                    <option value="">
-                                        Select Department
-                                    </option>
-
-                                    <option>General Medicine</option>
-                                    <option>Cardiology</option>
-                                    <option>Dermatology</option>
-                                    <option>Neurology</option>
-                                    <option>Pediatrics</option>
-                                    <option>Orthopedics</option>
-
-                                </select>
-
-                            </div>
-
-
-                            <!-- Doctor -->
-
-                            <div class="col-md-6">
-
-                                <label for="doctor"
-                                    class="form-label">
-                                    Doctor Selection
-                                </label>
-
-                                <select
-                                    class="form-select"
-                                    id="doctor"
-                                    required>
-
-                                    <option value="">
-                                        Select Doctor
-                                    </option>
-
-                                    <option>Dr. Arun Kumar</option>
-                                    <option>Dr. Priya Sharma</option>
-                                    <option>Dr. Rahul Reddy</option>
-                                    <option>Dr. Sneha Rao</option>
-
-                                </select>
-
-                            </div>
-
-
-                            <!-- Appointment Date -->
-
-                            <div class="col-md-6">
-
-                                <label for="appointmentDate"
-                                    class="form-label">
-                                    Appointment Date
-                                </label>
-
-                                <input
-                                    type="date"
-                                    class="form-control"
-                                    id="appointmentDate"
-                                    required>
-
-                            </div>
-
-
-                            <!-- Appointment Time -->
-
-                            <div class="col-md-6">
-
-                                <label for="appointmentTime"
-                                    class="form-label">
-                                    Appointment Time
-                                </label>
-
-                                <input
-                                    type="time"
-                                    class="form-control"
-                                    id="appointmentTime"
-                                    required>
-
-                            </div>
-
-
-                            <!-- Address -->
-
-                            <div class="col-12">
-
-                                <label for="address"
-                                    class="form-label">
-                                    Address
-                                </label>
-
-                                <textarea
-                                    class="form-control"
-                                    id="address"
-                                    rows="3"
-                                    placeholder="Enter your address"
-                                    required></textarea>
-
-                            </div>
-
-
-                            <!-- Symptoms -->
-
-                            <div class="col-12">
-
-                                <label for="symptoms"
-                                    class="form-label">
-                                    Symptoms / Health Concern
-                                </label>
-
-                                <textarea
-                                    class="form-control"
-                                    id="symptoms"
-                                    rows="4"
-                                    placeholder="Describe your symptoms or health concern"
-                                    required></textarea>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Buttons -->
-
-                        <div class="mt-4">
-
-                            <button
-                                type="submit"
-                                class="btn btn-primary me-2">
-
-                                <i class="bi bi-check-circle"></i>
-                                Register
-
-                            </button>
-
-
-                            <button
-                                type="reset"
-                                class="btn btn-outline-secondary">
-
-                                <i class="bi bi-arrow-counterclockwise"></i>
-                                Reset
-
-                            </button>
-
-                        </div>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= APPOINTMENTS ================= -->
-
-    <section id="appointments"
-        class="section-padding bg-light">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Appointments</h2>
-
-                <p>
-                    View scheduled patient appointments.
-                </p>
-
-            </div>
-
-
-            <div class="card shadow border-0">
-
-                <div class="card-body">
-
-                    <div class="table-responsive">
-
-                        <table class="table table-hover align-middle">
-
-                            <thead class="table-primary">
-
-                                <tr>
-
-                                    <th>Appointment ID</th>
-                                    <th>Patient Name</th>
-                                    <th>Department</th>
-                                    <th>Doctor</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Status</th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody>
-
-                                <tr>
-
-                                    <td>APT001</td>
-
-                                    <td>Rahul Kumar</td>
-
-                                    <td>Cardiology</td>
-
-                                    <td>Dr. Arun Kumar</td>
-
-                                    <td>10-10-2026</td>
-
-                                    <td>10:30 AM</td>
-
-                                    <td>
-                                        <span class="badge bg-success">
-                                            Confirmed
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>APT002</td>
-
-                                    <td>Anjali Sharma</td>
-
-                                    <td>Dermatology</td>
-
-                                    <td>Dr. Priya Sharma</td>
-
-                                    <td>12-10-2026</td>
-
-                                    <td>11:00 AM</td>
-
-                                    <td>
-                                        <span class="badge bg-warning text-dark">
-                                            Pending
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>APT003</td>
-
-                                    <td>Vijay Rao</td>
-
-                                    <td>Orthopedics</td>
-
-                                    <td>Dr. Rahul Reddy</td>
-
-                                    <td>15-10-2026</td>
-
-                                    <td>02:00 PM</td>
-
-                                    <td>
-                                        <span class="badge bg-danger">
-                                            Cancelled
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
+                        +91 98765 43210
 
                     </div>
 
@@ -621,329 +240,2039 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= HEALTH INFORMATION ================= -->
 
-    <section id="health" class="section-padding">
+<!-- =========================================================
+     HOSPITAL HIGHLIGHTS
+========================================================= -->
 
-        <div class="container">
+<section class="highlights">
 
-            <div class="section-title">
+    <div class="container">
 
-                <h2>Health Information</h2>
+        <div class="row g-3">
 
-                <p>
-                    Patient appointment and health details.
-                </p>
+            <div class="col-md-3">
+
+                <div class="highlight-card">
+
+                    <i class="bi bi-people-fill"></i>
+
+                    <h3>50+</h3>
+
+                    <p>Specialist Doctors</p>
+
+                </div>
 
             </div>
 
 
-            <div class="row g-4">
+            <div class="col-md-3">
 
+                <div class="highlight-card">
 
-                <div class="col-md-6">
+                    <i class="bi bi-hospital-fill"></i>
 
-                    <div class="card health-card shadow-sm h-100">
+                    <h3>20+</h3>
 
-                        <div class="card-body">
-
-                            <h5 class="card-title">
-                                <i class="bi bi-person-circle"></i>
-                                Patient Information
-                            </h5>
-
-                            <hr>
-
-                            <p>
-                                <strong>Patient Name:</strong>
-                                Rahul Kumar
-                            </p>
-
-                            <p>
-                                <strong>Blood Group:</strong>
-                                O+
-                            </p>
-
-                            <p>
-                                <strong>Department:</strong>
-                                Cardiology
-                            </p>
-
-                            <p>
-                                <strong>Doctor:</strong>
-                                Dr. Arun Kumar
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <p>Departments</p>
 
                 </div>
 
+            </div>
 
-                <div class="col-md-6">
 
-                    <div class="card health-card shadow-sm h-100">
+            <div class="col-md-3">
 
-                        <div class="card-body">
+                <div class="highlight-card">
 
-                            <h5 class="card-title">
-                                <i class="bi bi-calendar-check"></i>
-                                Appointment Information
-                            </h5>
+                    <i class="bi bi-heart-pulse-fill"></i>
 
-                            <hr>
+                    <h3>24/7</h3>
 
-                            <p>
-                                <strong>Appointment Date:</strong>
-                                10-10-2026
-                            </p>
-
-                            <p>
-                                <strong>Appointment Time:</strong>
-                                10:30 AM
-                            </p>
-
-                            <p>
-                                <strong>Symptoms:</strong>
-                                Chest discomfort and fatigue
-                            </p>
-
-                            <p>
-                                <strong>Status:</strong>
-
-                                <span class="badge bg-success">
-                                    Confirmed
-                                </span>
-
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <p>Emergency Care</p>
 
                 </div>
 
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="highlight-card">
+
+                    <i class="bi bi-award-fill"></i>
+
+                    <h3>20+</h3>
+
+                    <p>Years of Service</p>
+
+                </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- ================= SERVICES ================= -->
 
-    <section id="services"
-        class="section-padding bg-light">
 
-        <div class="container">
+<!-- =========================================================
+     PATIENT REGISTRATION
+========================================================= -->
 
-            <div class="section-title">
+<section id="registration" class="section-padding">
 
-                <h2>Our Services</h2>
+    <div class="container">
 
-                <p>
-                    Healthcare services available through our portal.
-                </p>
+        <div class="section-heading">
 
-            </div>
+            <span>Patient Portal</span>
 
+            <h2>Patient Registration & Appointment</h2>
 
-            <div class="row g-4">
-
-
-                <div class="col-md-4">
-
-                    <div class="card service-card h-100 shadow-sm">
-
-                        <div class="card-body text-center">
-
-                            <i class="bi bi-calendar2-check service-icon"></i>
-
-                            <h5 class="mt-3">
-                                Appointment Booking
-                            </h5>
-
-                            <p>
-                                Schedule your healthcare appointment
-                                conveniently.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="card service-card h-100 shadow-sm">
-
-                        <div class="card-body text-center">
-
-                            <i class="bi bi-heart-pulse service-icon"></i>
-
-                            <h5 class="mt-3">
-                                Health Information
-                            </h5>
-
-                            <p>
-                                Access important appointment and
-                                health-related information.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="card service-card h-100 shadow-sm">
-
-                        <div class="card-body text-center">
-
-                            <i class="bi bi-person-vcard service-icon"></i>
-
-                            <h5 class="mt-3">
-                                Patient Management
-                            </h5>
-
-                            <p>
-                                Maintain organized patient registration
-                                information.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= TECHNOLOGIES ================= -->
-
-    <section id="technologies"
-        class="section-padding">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Technologies Used</h2>
-
-                <p>
-                    Technologies used to develop this project.
-                </p>
-
-            </div>
-
-
-            <div class="row g-4">
-
-
-                <div class="col-md-4">
-
-                    <div class="tech-card text-center">
-
-                        <i class="bi bi-filetype-html"></i>
-
-                        <h4>HTML5</h4>
-
-                        <p>
-                            Used to structure the healthcare portal.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="tech-card text-center">
-
-                        <i class="bi bi-filetype-css"></i>
-
-                        <h4>CSS3</h4>
-
-                        <p>
-                            Used for styling, layout and responsiveness.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4">
-
-                    <div class="tech-card text-center">
-
-                        <i class="bi bi-bootstrap-fill"></i>
-
-                        <h4>Bootstrap 5</h4>
-
-                        <p>
-                            Used for responsive layouts and UI components.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="bg-dark text-white text-center py-4">
-
-        <div class="container">
-
-            <h5>
-                <i class="bi bi-heart-pulse-fill"></i>
-                CarePlus Healthcare Portal
-            </h5>
-
-            <p class="mb-0">
-                Healthcare Appointment & Patient Portal
+            <p>
+                Register your details and schedule your healthcare appointment.
             </p>
 
-            <small>
-                Developed using HTML5, CSS3 and Bootstrap 5
-            </small>
+        </div>
+
+
+        <div class="card portal-card shadow">
+
+            <div class="card-header portal-header">
+
+                <i class="bi bi-person-plus-fill"></i>
+
+                Patient Registration Form
+
+            </div>
+
+
+            <div class="card-body p-4 p-lg-5">
+
+                <form>
+
+
+                    <!-- PERSONAL INFORMATION -->
+
+                    <h5 class="form-section-title">
+                        <i class="bi bi-person"></i>
+                        Personal Information
+                    </h5>
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Patient Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter full name"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Email Address *
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="example@email.com"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label class="form-label">
+                                Mobile Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                placeholder="10-digit mobile number"
+                                pattern="[0-9]{10}"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label class="form-label">
+                                Date of Birth *
+                            </label>
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+
+                            <label class="form-label">
+                                Gender *
+                            </label>
+
+                            <select class="form-select" required>
+
+                                <option value="">
+                                    Select Gender
+                                </option>
+
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Blood Group *
+                            </label>
+
+                            <select class="form-select" required>
+
+                                <option value="">
+                                    Select Blood Group
+                                </option>
+
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+                                <option>O+</option>
+                                <option>O-</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Patient ID
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Auto generated / existing ID">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- APPOINTMENT INFORMATION -->
+
+                    <h5 class="form-section-title mt-5">
+
+                        <i class="bi bi-calendar-check"></i>
+
+                        Appointment Information
+
+                    </h5>
+
+
+                    <div class="row g-4">
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Department *
+                            </label>
+
+                            <select class="form-select" required>
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option>Cardiology</option>
+                                <option>Dermatology</option>
+                                <option>General Medicine</option>
+                                <option>Neurology</option>
+                                <option>Orthopedics</option>
+                                <option>Pediatrics</option>
+                                <option>ENT</option>
+                                <option>Ophthalmology</option>
+                                <option>Dental</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Doctor *
+                            </label>
+
+                            <select class="form-select" required>
+
+                                <option value="">
+                                    Select Doctor
+                                </option>
+
+                                <option>
+                                    Dr. Arun Kumar - Cardiology
+                                </option>
+
+                                <option>
+                                    Dr. Priya Sharma - Dermatology
+                                </option>
+
+                                <option>
+                                    Dr. Rahul Reddy - Neurology
+                                </option>
+
+                                <option>
+                                    Dr. Sneha Rao - Pediatrics
+                                </option>
+
+                                <option>
+                                    Dr. Anil Kumar - Orthopedics
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Appointment Date *
+                            </label>
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                required>
+
+                        </div>
+
+
+                        <div class="col-md-6">
+
+                            <label class="form-label">
+                                Appointment Time *
+                            </label>
+
+                            <select class="form-select" required>
+
+                                <option value="">
+                                    Select Time
+                                </option>
+
+                                <option>09:00 AM</option>
+                                <option>09:30 AM</option>
+                                <option>10:00 AM</option>
+                                <option>10:30 AM</option>
+                                <option>11:00 AM</option>
+                                <option>11:30 AM</option>
+                                <option>02:00 PM</option>
+                                <option>02:30 PM</option>
+                                <option>03:00 PM</option>
+                                <option>04:00 PM</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label class="form-label">
+                                Address *
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="3"
+                                placeholder="Enter complete address"
+                                required></textarea>
+
+                        </div>
+
+
+                        <div class="col-12">
+
+                            <label class="form-label">
+                                Symptoms / Health Concern *
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                rows="4"
+                                placeholder="Describe your symptoms or health concern"
+                                required></textarea>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONSENT -->
+
+                    <div class="form-check mt-4">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="consent"
+                            required>
+
+                        <label
+                            class="form-check-label"
+                            for="consent">
+
+                            I confirm that the information provided
+                            is accurate.
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="mt-4">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-lg me-2">
+
+                            <i class="bi bi-check-circle"></i>
+
+                            Register Appointment
+
+                        </button>
+
+
+                        <button
+                            type="reset"
+                            class="btn btn-outline-secondary btn-lg">
+
+                            <i class="bi bi-arrow-counterclockwise"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
 
 
-    <!-- Bootstrap 5 JavaScript Bundle -->
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+<!-- =========================================================
+     APPOINTMENT DASHBOARD
+========================================================= -->
 
-</body>
+<section id="appointments"
+         class="section-padding light-section">
 
-</html>
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Patient Dashboard</span>
+
+            <h2>Appointment Details</h2>
+
+            <p>
+                Track scheduled appointments and checkup status.
+            </p>
+
+        </div>
+
+
+
+        <!-- STATUS CARDS -->
+
+        <div class="row g-4 mb-4">
+
+
+            <div class="col-md-3">
+
+                <div class="status-card">
+
+                    <div>
+
+                        <p>Total Appointments</p>
+
+                        <h3>08</h3>
+
+                    </div>
+
+                    <i class="bi bi-calendar2-check"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="status-card">
+
+                    <div>
+
+                        <p>Upcoming</p>
+
+                        <h3>03</h3>
+
+                    </div>
+
+                    <i class="bi bi-calendar-event"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="status-card">
+
+                    <div>
+
+                        <p>Completed</p>
+
+                        <h3>04</h3>
+
+                    </div>
+
+                    <i class="bi bi-check-circle"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="status-card">
+
+                    <div>
+
+                        <p>Cancelled</p>
+
+                        <h3>01</h3>
+
+                    </div>
+
+                    <i class="bi bi-x-circle"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- APPOINTMENT TABLE -->
+
+        <div class="card shadow border-0">
+
+            <div class="card-body p-0">
+
+                <div class="table-responsive">
+
+                    <table class="table appointment-table mb-0">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Appointment ID</th>
+                                <th>Patient</th>
+                                <th>Department</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Checkup Status</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>APT001</strong>
+                                </td>
+
+                                <td>
+                                    Rahul Kumar
+                                </td>
+
+                                <td>
+                                    Cardiology
+                                </td>
+
+                                <td>
+                                    Dr. Arun Kumar
+                                </td>
+
+                                <td>
+                                    10 Oct 2026
+                                </td>
+
+                                <td>
+                                    10:30 AM
+                                </td>
+
+                                <td>
+
+                                    <span class="status confirmed">
+                                        Confirmed
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary">
+
+                                        View
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>APT002</strong>
+                                </td>
+
+                                <td>
+                                    Anjali Sharma
+                                </td>
+
+                                <td>
+                                    Dermatology
+                                </td>
+
+                                <td>
+                                    Dr. Priya Sharma
+                                </td>
+
+                                <td>
+                                    12 Oct 2026
+                                </td>
+
+                                <td>
+                                    11:00 AM
+                                </td>
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary">
+
+                                        View
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>APT003</strong>
+                                </td>
+
+                                <td>
+                                    Vijay Rao
+                                </td>
+
+                                <td>
+                                    Orthopedics
+                                </td>
+
+                                <td>
+                                    Dr. Anil Kumar
+                                </td>
+
+                                <td>
+                                    15 Oct 2026
+                                </td>
+
+                                <td>
+                                    02:00 PM
+                                </td>
+
+                                <td>
+
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary">
+
+                                        View
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>APT004</strong>
+                                </td>
+
+                                <td>
+                                    Sneha Reddy
+                                </td>
+
+                                <td>
+                                    General Medicine
+                                </td>
+
+                                <td>
+                                    Dr. Meena Rao
+                                </td>
+
+                                <td>
+                                    18 Oct 2026
+                                </td>
+
+                                <td>
+                                    09:30 AM
+                                </td>
+
+                                <td>
+
+                                    <span class="status cancelled">
+                                        Cancelled
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn btn-sm btn-outline-primary">
+
+                                        View
+
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HEALTH INFORMATION
+========================================================= -->
+
+<section id="health" class="section-padding">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Patient Medical Profile</span>
+
+            <h2>Health Information</h2>
+
+            <p>
+                View patient health and appointment information.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- PATIENT PROFILE -->
+
+            <div class="col-lg-4">
+
+                <div class="card health-profile-card shadow-sm">
+
+                    <div class="profile-header">
+
+                        <div class="profile-icon">
+
+                            <i class="bi bi-person-fill"></i>
+
+                        </div>
+
+                        <h4>Rahul Kumar</h4>
+
+                        <p>
+                            Patient ID: PAT1001
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <div class="info-row">
+
+                            <span>Age</span>
+
+                            <strong>32 Years</strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Gender</span>
+
+                            <strong>Male</strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Blood Group</span>
+
+                            <strong>O+</strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Mobile</span>
+
+                            <strong>98765 43210</strong>
+
+                        </div>
+
+
+                        <div class="info-row">
+
+                            <span>Email</span>
+
+                            <strong>
+                                rahul@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- APPOINTMENT INFORMATION -->
+
+            <div class="col-lg-8">
+
+                <div class="card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+                        <h4 class="mb-4">
+
+                            <i class="bi bi-clipboard2-pulse"></i>
+
+                            Latest Checkup Information
+
+                        </h4>
+
+
+                        <div class="row g-4">
+
+
+                            <div class="col-md-6">
+
+                                <div class="medical-info">
+
+                                    <span>Department</span>
+
+                                    <strong>Cardiology</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="medical-info">
+
+                                    <span>Doctor</span>
+
+                                    <strong>Dr. Arun Kumar</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="medical-info">
+
+                                    <span>Appointment Date</span>
+
+                                    <strong>10 October 2026</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="medical-info">
+
+                                    <span>Appointment Time</span>
+
+                                    <strong>10:30 AM</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <div class="medical-info">
+
+                                    <span>Symptoms / Health Concern</span>
+
+                                    <strong>
+                                        Chest discomfort and fatigue
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="medical-info">
+
+                                    <span>Checkup Status</span>
+
+                                    <strong>
+
+                                        <span class="status confirmed">
+                                            Confirmed
+                                        </span>
+
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <div class="medical-info">
+
+                                    <span>Next Follow-up</span>
+
+                                    <strong>
+                                        24 October 2026
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DOCTORS
+========================================================= -->
+
+<section id="doctors"
+         class="section-padding light-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Our Medical Team</span>
+
+            <h2>Meet Our Doctors</h2>
+
+            <p>
+                Experienced specialists dedicated to patient care.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="doctor-card">
+
+                    <div class="doctor-image">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+
+                    <h5>Dr. Arun Kumar</h5>
+
+                    <p>Cardiologist</p>
+
+                    <span class="doctor-status">
+                        Available Today
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="doctor-card">
+
+                    <div class="doctor-image">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+
+                    <h5>Dr. Priya Sharma</h5>
+
+                    <p>Dermatologist</p>
+
+                    <span class="doctor-status">
+                        Available Today
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="doctor-card">
+
+                    <div class="doctor-image">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+
+                    <h5>Dr. Rahul Reddy</h5>
+
+                    <p>Neurologist</p>
+
+                    <span class="doctor-status">
+                        Available Tomorrow
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="doctor-card">
+
+                    <div class="doctor-image">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+
+                    <h5>Dr. Sneha Rao</h5>
+
+                    <p>Pediatrician</p>
+
+                    <span class="doctor-status">
+                        Available Today
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services" class="section-padding">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Healthcare Services</span>
+
+            <h2>Complete Healthcare Under One Roof</h2>
+
+            <p>
+                From specialist consultations and advanced diagnostics
+                to pharmacy and emergency care, our hospital provides
+                comprehensive healthcare services.
+            </p>
+
+        </div>
+
+
+        <!-- ================= MEDICAL SPECIALTIES ================= -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <div class="category-icon">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+
+                <div>
+                    <h3>Medical Specialties</h3>
+
+                    <p>
+                        Expert medical care across multiple specialties.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-heart-pulse"></i>
+
+                        <h4>Cardiology</h4>
+
+                        <p>
+                            Heart health consultations, diagnosis and
+                            cardiac care.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-activity"></i>
+
+                        <h4>Neurology</h4>
+
+                        <p>
+                            Diagnosis and treatment of neurological
+                            conditions.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-person-walking"></i>
+
+                        <h4>Orthopedics</h4>
+
+                        <p>
+                            Bone, joint, muscle and mobility-related
+                            healthcare.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-person-hearts"></i>
+
+                        <h4>Pediatrics</h4>
+
+                        <p>
+                            Specialized healthcare for infants,
+                            children and adolescents.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-emoji-smile"></i>
+
+                        <h4>Dermatology</h4>
+
+                        <p>
+                            Diagnosis and treatment of skin, hair and
+                            nail conditions.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-eye"></i>
+
+                        <h4>Ophthalmology</h4>
+
+                        <p>
+                            Comprehensive eye examinations and
+                            vision care.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-ear"></i>
+
+                        <h4>ENT</h4>
+
+                        <p>
+                            Ear, nose and throat consultations and
+                            treatments.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-gender-female"></i>
+
+                        <h4>Gynecology & Obstetrics</h4>
+
+                        <p>
+                            Women's healthcare, maternity and
+                            reproductive care.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-lungs"></i>
+
+                        <h4>Pulmonology</h4>
+
+                        <p>
+                            Diagnosis and management of respiratory
+                            conditions.
+                        </p>
+
+                        <a href="#registration">
+                            Book Consultation
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= DIAGNOSTICS ================= -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <div class="category-icon">
+                    <i class="bi bi-eyedropper"></i>
+                </div>
+
+                <div>
+
+                    <h3>Diagnostics & Laboratory</h3>
+
+                    <p>
+                        Reliable diagnostic and laboratory services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-droplet-half"></i>
+
+                        <h4>Blood Tests</h4>
+
+                        <p>
+                            Routine and specialized blood investigations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-virus"></i>
+
+                        <h4>Pathology Lab</h4>
+
+                        <p>
+                            Laboratory testing and diagnostic analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-file-medical"></i>
+
+                        <h4>ECG</h4>
+
+                        <p>
+                            Electrocardiogram and cardiac monitoring.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-soundwave"></i>
+
+                        <h4>Ultrasound</h4>
+
+                        <p>
+                            Non-invasive diagnostic imaging services.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-radioactive"></i>
+
+                        <h4>X-Ray</h4>
+
+                        <p>
+                            Digital radiology and diagnostic imaging.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-cpu"></i>
+
+                        <h4>CT Scan</h4>
+
+                        <p>
+                            Advanced computed tomography imaging.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-magnet"></i>
+
+                        <h4>MRI Scan</h4>
+
+                        <p>
+                            Detailed magnetic resonance imaging.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-heart"></i>
+
+                        <h4>Echocardiogram</h4>
+
+                        <p>
+                            Ultrasound-based heart examination.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PHARMACY ================= -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <div class="category-icon">
+                    <i class="bi bi-capsule"></i>
+                </div>
+
+                <div>
+
+                    <h3>Pharmacy Services</h3>
+
+                    <p>
+                        Convenient access to prescribed medicines.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-capsule-pill"></i>
+
+                        <h4>Hospital Pharmacy</h4>
+
+                        <p>
+                            Medicines prescribed by our doctors
+                            are available through the hospital pharmacy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-prescription2"></i>
+
+                        <h4>Prescription Support</h4>
+
+                        <p>
+                            Assistance with understanding prescribed
+                            medications and dosage instructions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-box-seam"></i>
+
+                        <h4>Medicine Availability</h4>
+
+                        <p>
+                            Check medicine availability through
+                            the hospital pharmacy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= EMERGENCY ================= -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <div class="category-icon emergency-icon">
+                    <i class="bi bi-truck-front-fill"></i>
+                </div>
+
+                <div>
+
+                    <h3>Emergency & Critical Care</h3>
+
+                    <p>
+                        Immediate care for urgent medical situations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-activity"></i>
+
+                        <h4>24/7 Emergency</h4>
+
+                        <p>
+                            Emergency medical services available
+                            around the clock.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-truck"></i>
+
+                        <h4>Ambulance</h4>
+
+                        <p>
+                            Emergency transportation support
+                            for patients.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-hospital"></i>
+
+                        <h4>ICU Care</h4>
+
+                        <p>
+                            Critical care facilities for patients
+                            requiring intensive monitoring.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-bandaid"></i>
+
+                        <h4>Trauma Care</h4>
+
+                        <p>
+                            Immediate medical support for
+                            emergency injuries.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PATIENT SUPPORT ================= -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <div class="category-icon">
+                    <i class="bi bi-people-fill"></i>
+                </div>
+
+                <div>
+
+                    <h3>Patient Support Services</h3>
+
+                    <p>
+                        Additional services designed around patient needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-person-wheelchair"></i>
+
+                        <h4>Physiotherapy</h4>
+
+                        <p>
+                            Rehabilitation and physical therapy
+                            support for recovery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-egg-fried"></i>
+
+                        <h4>Nutrition & Dietetics</h4>
+
+                        <p>
+                            Professional dietary guidance based
+                            on individual healthcare needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-house-heart"></i>
+
+                        <h4>Home Healthcare</h4>
+
+                        <p>
+                            Healthcare support for eligible patients
+                            at home.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-camera-video"></i>
+
+                        <h4>Telemedicine</h4>
+
+                        <p>
+                            Remote consultations for suitable
+                            healthcare needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-person-hearts"></i>
+
+                        <h4>Nursing Services</h4>
+
+                        <p>
+                            Professional nursing assistance and
+                            patient support.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="service-card">
+
+                        <i class="bi bi-heart"></i>
+
+                        <h4>Health Checkup Packages</h4>
+
+                        <p>
+                            Preventive health screening and
+                            wellness checkup programs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= ADMINISTRATIVE ================= -->
+
+        <div class="service-category">
+
+            <div class="category-heading">
+
+                <div class="category-icon">
+                    <i class="bi bi-clipboard-data"></i>
+                </div>
+
+                <div>
+
+                    <h3>Patient & Administrative Services</h3>
+
+                    <p>
+                        Services that make your hospital experience easier.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-file-earmark-medical"></i>
+
+                        <h4>Medical Records</h4>
+
+                        <p>
+                            Patient health and appointment records.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-credit-card"></i>
+
+                        <h4>Billing</h4>
+
+                        <p>
+                            Hospital billing and payment assistance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <h4>Insurance Support</h4>
+
+                        <p>
+                            Assistance with eligible insurance
+                            processes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="service-card compact">
+
+                        <i class="bi bi-headset"></i>
+
+                        <h4>Patient Help Desk</h4>
+
+                        <p>
+                            Assistance with appointments and
+                            hospital services.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+

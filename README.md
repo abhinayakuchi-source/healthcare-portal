@@ -1,32 +1,35 @@
 # 🏥 Healthcare Appointment & Patient Portal
 
-A responsive healthcare website built using **HTML5, CSS3, and Bootstrap 5**.
+A responsive Healthcare Appointment & Patient Portal developed using HTML5, CSS3, and Bootstrap 5.
 
-## ✨ Features
+## Demo
 
-- 🏠 Home Page
-- 👨‍⚕️ Doctors
-- 📝 Patient Registration
-- 📅 Appointments
-- 🏥 Health Information
-- 🩺 Healthcare Services
-- 💻 Technologies
-- 📞 Contact
-- 📱 Responsive Design
-- 🚫 No JavaScript
+https://abhinayakuchi-source.github.io/healthcare-appointment-patient-portal/
 
-## 🛠️ Technologies
+## Features
+
+- Patient registration form
+- HTML5 form validation
+- Appointment details
+- Health information
+- Healthcare services
+- Technologies section
+- Responsive navigation
+- Mobile-friendly design
+- Bootstrap cards, forms, buttons, and tables
+
+## Technologies
 
 - HTML5
 - CSS3
 - Bootstrap 5
 
-## 📂 Project Structure
+## Project Structure
 
-healthcare-portal/
+
+healthcare-appointment-patient-portal/
 ├── index.html
-├── style.css
-└── README.md
+└── style.css
 
 ## 🚀 Demo
 

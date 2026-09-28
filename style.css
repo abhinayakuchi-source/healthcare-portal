@@ -5,453 +5,151 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #263238;
-    background-color: #ffffff;
-}
-
-section {
-    scroll-margin-top: 75px;
-}
-
-.section-padding {
-    padding: 80px 0;
-}
-
-.section-label {
-    color: #0d6efd;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-
-/* ================= NAVBAR ================= */
-
-.navbar {
-    padding: 14px 0;
-}
-
-.navbar-brand {
-    font-size: 22px;
-}
-
-.nav-link {
-    font-weight: 500;
-    margin-left: 8px;
-}
-
-.nav-link:hover {
-    color: #0d6efd !important;
+    font-family: Arial, sans-serif;
+    color: #222;
 }
 
 
 /* ================= HERO ================= */
 
 .hero-section {
+    background: linear-gradient(135deg, #0d6efd, #084298);
+    color: white;
     padding: 100px 0;
-    background: linear-gradient(135deg, #eaf5ff, #f8fbff);
-}
-
-.hero-section h1 {
-    line-height: 1.2;
-}
-
-.hero-section .lead {
-    color: #607d8b;
-    max-width: 650px;
-}
-
-.hero-card {
-    background-color: white;
-    padding: 45px 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .hero-icon {
-    font-size: 90px;
-    color: #0d6efd;
-}
-
-.hero-card h3 {
-    color: #263238;
-}
-
-.hero-card p {
-    color: #607d8b;
-}
-
-
-/* ================= QUICK ACCESS ================= */
-
-.quick-card {
-    display: block;
-    height: 100%;
-    padding: 30px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #263238;
-    background-color: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 15px;
-    transition: 0.3s;
-}
-
-.quick-card i {
-    font-size: 42px;
-    color: #0d6efd;
-    margin-bottom: 15px;
-}
-
-.quick-card h5 {
-    font-weight: bold;
-}
-
-.quick-card p {
-    color: #6c757d;
-    margin-bottom: 0;
-}
-
-.quick-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
-    color: #263238;
-}
-
-
-/* ================= STATS ================= */
-
-.stats-section {
-    padding: 50px 0;
-    background-color: #0d6efd;
-    color: white;
-}
-
-.stats-section h2 {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.stats-section p {
-    margin-bottom: 0;
-}
-
-
-/* ================= DOCTORS ================= */
-
-.doctor-card {
-    background-color: white;
-    padding: 30px 20px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    height: 100%;
-    transition: 0.3s;
-}
-
-.doctor-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
-}
-
-.doctor-icon {
-    font-size: 75px;
-    color: #0d6efd;
-    margin-bottom: 15px;
-}
-
-.doctor-card h5 {
-    font-weight: bold;
-}
-
-
-/* ================= REGISTRATION FORM ================= */
-
-.form-card {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px;
-    background-color: white;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.form-label {
-    font-weight: 600;
-}
-
-.form-control,
-.form-select {
-    min-height: 48px;
-    border-radius: 8px;
-}
-
-textarea.form-control {
-    min-height: auto;
-}
-
-.form-control:focus,
-.form-select:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
-}
-
-
-/* ================= APPOINTMENTS ================= */
-
-.appointment-table {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
-}
-
-.appointment-table table {
-    margin-bottom: 0;
-}
-
-.appointment-table th {
-    white-space: nowrap;
-    padding: 15px;
-}
-
-.appointment-table td {
-    padding: 15px;
-}
-
-
-/* ================= HEALTH INFORMATION ================= */
-
-.health-card {
-    max-width: 1000px;
-    margin: auto;
-    padding: 35px;
-    background-color: white;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.info-box {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f4f8fc;
-    border-left: 4px solid #0d6efd;
-}
-
-.info-box span {
-    display: block;
-    color: #6c757d;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.info-box strong {
-    display: block;
-    font-size: 17px;
+    font-size: 170px;
+    opacity: 0.9;
 }
 
 
 /* ================= SERVICES ================= */
 
 .service-card {
-    height: 100%;
-    padding: 30px;
-    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 100%;
     transition: 0.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eaf3ff;
+    font-size: 50px;
     color: #0d6efd;
-    border-radius: 12px;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.service-card h5 {
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-
-.service-card ul {
-    padding-left: 20px;
-    color: #607d8b;
-}
-
-.service-card li {
-    margin-bottom: 8px;
 }
 
 
-/* ================= TECHNOLOGIES ================= */
+/* ================= SECTION ================= */
 
-.technology-card {
-    height: 100%;
-    padding: 35px 25px;
-    text-align: center;
-    border: 1px solid #e5e7eb;
+.section-light {
+    background: #f5f8fc;
+}
+
+
+/* ================= DOCTORS ================= */
+
+.doctor-card {
+    border: none;
     border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
 
-.technology-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+.doctor-card:hover {
+    transform: translateY(-8px);
 }
 
-.technology-card i {
-    font-size: 60px;
+.doctor-icon {
+    background: #e8f1ff;
     color: #0d6efd;
-    margin-bottom: 15px;
+    font-size: 90px;
+    text-align: center;
+    padding: 25px;
 }
 
-.technology-card h4 {
-    font-weight: bold;
+
+/* ================= REGISTRATION ================= */
+
+.registration-section {
+    background: #f5f8fc;
 }
 
-.technology-card p {
-    color: #607d8b;
+.registration-section .card {
+    border: none;
+    border-radius: 15px;
+}
+
+.form-control,
+.form-select {
+    min-height: 48px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+
+/* ================= PATIENT DETAILS ================= */
+
+.table {
+    vertical-align: middle;
+}
+
+.table th {
+    font-weight: 600;
 }
 
 
 /* ================= CONTACT ================= */
 
 .contact-section {
-    padding: 80px 0;
-    background-color: #eaf5ff;
+    background: #eaf3ff;
 }
 
-.contact-section p {
-    color: #607d8b;
-}
-
-.contact-details {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-}
-
-.contact-details p {
-    margin-bottom: 18px;
-}
-
-.contact-details p:last-child {
-    margin-bottom: 0;
-}
-
-.contact-details i {
+.contact-icon {
+    font-size: 40px;
     color: #0d6efd;
-    margin-right: 10px;
 }
 
 
 /* ================= FOOTER ================= */
 
-.footer {
-    padding: 35px 0;
-    background-color: #17202a;
-    color: white;
-}
-
-.footer h5 {
-    font-weight: bold;
-}
-
-.footer p {
-    color: #b0bec5;
-    margin-bottom: 8px;
+footer {
+    margin-top: 0;
 }
 
 
-/* ================= RESPONSIVE DESIGN ================= */
+/* ================= MOBILE ================= */
 
-@media (max-width: 991px) {
-
-    .navbar-nav {
-        padding-top: 15px;
-    }
-
-    .nav-link {
-        margin-left: 0;
-        padding: 10px 0;
-    }
+@media (max-width: 768px) {
 
     .hero-section {
         padding: 70px 0;
-    }
-
-}
-
-
-@media (max-width: 767px) {
-
-    .section-padding {
-        padding: 60px 0;
-    }
-
-    .hero-section {
         text-align: center;
-        padding: 60px 0;
     }
 
     .hero-section h1 {
-        font-size: 40px;
-    }
-
-    .hero-card {
-        padding: 30px 20px;
+        font-size: 38px;
     }
 
     .hero-icon {
-        font-size: 70px;
-    }
-
-    .form-card,
-    .health-card {
-        padding: 25px 18px;
-    }
-
-    .stats-section {
-        padding: 40px 0;
-    }
-
-    .stats-section .col-6 {
-        margin-bottom: 25px;
-    }
-
-}
-
-
-@media (max-width: 575px) {
-
-    .hero-section h1 {
-        font-size: 34px;
+        font-size: 100px;
     }
 
     .hero-section .btn {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .hero-section .me-2 {
-        margin-right: 0 !important;
-    }
-
-    .form-card {
-        padding: 20px 15px;
+        margin-left: 0 !important;
+        margin-right: 5px;
     }
 
 }

@@ -1,1322 +1,949 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>MedCare Hospital | Patient Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="description"
+        content="Healthcare Appointment and Patient Portal">
 
-<style>
+    <title>CarePlus Healthcare Portal</title>
 
-/* ===== GENERAL ===== */
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-* {
-    box-sizing: border-box;
-}
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f3f8fa;
-    color: #425466;
-}
-
-
-/* ===== TOP BAR ===== */
-
-.top-bar {
-    background: #082b40;
-    color: white;
-    padding: 9px 6%;
-    font-size: 14px;
-}
-
-.top-bar .container {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-/* ===== NAVBAR ===== */
-
-.navbar {
-    background: white;
-    min-height: 78px;
-    padding: 10px 5%;
-    box-shadow: 0 3px 18px rgba(0,0,0,.08);
-}
-
-.navbar-brand {
-    color: #12344d !important;
-    font-size: 23px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar-brand i {
-    color: #087f8c;
-    font-size: 34px;
-}
-
-.navbar-brand small {
-    display: block;
-    color: #087f8c;
-    font-size: 11px;
-    letter-spacing: 1px;
-}
-
-.nav-link {
-    color: #435466 !important;
-    font-weight: 600;
-    margin-left: 5px;
-    padding: 10px 14px !important;
-    border-radius: 8px;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    background: #087f8c;
-    color: white !important;
-}
-
-
-/* ===== HERO ===== */
-
-.hero {
-    background: linear-gradient(135deg, #087f8c, #12344d);
-    color: white;
-    padding: 80px 6%;
-}
-
-.hero h1 {
-    font-size: 55px;
-    font-weight: 800;
-    line-height: 1.1;
-    margin: 20px 0;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-}
-
-.hero-badge {
-    display: inline-block;
-    padding: 9px 18px;
-    border-radius: 30px;
-    background: rgba(255,255,255,.15);
-    border: 1px solid rgba(255,255,255,.3);
-    font-weight: 600;
-}
-
-.hero-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 25px;
-}
-
-.hero-list li {
-    margin: 12px 0;
-}
-
-.hero-list i {
-    color: #78e0d4;
-    margin-right: 8px;
-}
-
-.hero-card {
-    background: white;
-    color: #435466;
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.2);
-}
-
-.hero-card h3 {
-    color: #12344d;
-    font-weight: 750;
-}
-
-.hero-card i {
-    color: #087f8c;
-}
-
-
-/* ===== SECTIONS ===== */
-
-.section {
-    padding: 80px 5%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.section-title .subtitle {
-    color: #087f8c;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
-}
-
-.section-title h2 {
-    color: #12344d;
-    font-size: 38px;
-    font-weight: 800;
-}
-
-.section-title p {
-    max-width: 700px;
-    margin: auto;
-    color: #718096;
-}
-
-
-/* ===== REGISTRATION ===== */
-
-.registration-section {
-    background: #f3f8fa;
-}
-
-.registration-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 12px 35px rgba(18,52,77,.12);
-}
-
-.registration-sidebar {
-    height: 100%;
-    padding: 40px 30px;
-    color: white;
-    background: linear-gradient(160deg, #12344d, #05636d);
-}
-
-.registration-sidebar h3 {
-    font-weight: 800;
-}
-
-.registration-sidebar .subtitle {
-    color: #78e0d4;
-}
-
-.sidebar-feature {
-    display: flex;
-    gap: 14px;
-    margin: 25px 0;
-}
-
-.sidebar-feature i {
-    min-width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,.12);
-    border-radius: 10px;
-    color: #78e0d4;
-}
-
-.sidebar-feature small {
-    display: block;
-    color: rgba(255,255,255,.7);
-}
-
-.form-area {
-    padding: 45px;
-}
-
-.form-heading h2 {
-    color: #12344d;
-    font-weight: 800;
-}
-
-.form-icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    background: #e8f7f8;
-    color: #087f8c;
-    font-size: 23px;
-}
-
-.form-section-card {
-    border: 1px solid #dce6eb;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-}
-
-.form-section-card h5 {
-    color: #12344d;
-    font-weight: 700;
-    border-bottom: 2px solid #e8f7f8;
-    padding-bottom: 12px;
-    margin-bottom: 22px;
-}
-
-.form-section-card h5 i {
-    color: #087f8c;
-    margin-right: 8px;
-}
-
-.form-label {
-    color: #12344d;
-    font-weight: 600;
-}
-
-.form-control,
-.form-select {
-    min-height: 48px;
-    border: 1px solid #dce6eb;
-    border-radius: 9px;
-    padding: 11px 14px;
-}
-
-.form-control:focus,
-.form-select:focus {
-    border-color: #087f8c;
-    box-shadow: 0 0 0 4px rgba(8,127,140,.12);
-}
-
-textarea.form-control {
-    min-height: 110px;
-}
-
-
-/* ===== BUTTONS ===== */
-
-.btn-primary {
-    background: #087f8c !important;
-    border-color: #087f8c !important;
-    padding: 12px 28px;
-    border-radius: 9px;
-    font-weight: 700;
-}
-
-.btn-primary:hover {
-    background: #05636d !important;
-}
-
-
-/* ===== APPOINTMENTS ===== */
-
-.appointment-section {
-    background: white;
-}
-
-.table-card {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(18,52,77,.1);
-}
-
-.table thead th {
-    background: #12344d;
-    color: white;
-    padding: 16px;
-}
-
-.table tbody td {
-    padding: 16px;
-}
-
-.empty-table {
-    text-align: center;
-    padding: 50px !important;
-    color: #718096;
-}
-
-.empty-table i {
-    display: block;
-    font-size: 40px;
-    color: #b8c8d0;
-    margin-bottom: 10px;
-}
-
-
-/* ===== HEALTH ===== */
-
-.health-section {
-    background: #f3f8fa;
-}
-
-.health-card {
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(18,52,77,.1);
-}
-
-.health-info-item {
-    background: #f7fafb;
-    border-left: 4px solid #087f8c;
-    padding: 18px;
-    border-radius: 8px;
-}
-
-.health-info-item span {
-    display: block;
-    color: #718096;
-    font-size: 13px;
-}
-
-.health-info-item strong {
-    color: #12344d;
-}
-
-
-/* ===== SERVICES ===== */
-
-.services-section {
-    background: white;
-}
-
-.service-card {
-    background: white;
-    border: 1px solid #dce6eb;
-    border-radius: 18px;
-    padding: 30px;
-    height: 100%;
-    transition: .3s;
-}
-
-.service-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 30px rgba(18,52,77,.12);
-    border-color: #087f8c;
-}
-
-.service-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 15px;
-    background: #e8f7f8;
-    color: #087f8c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.service-card h4 {
-    color: #12344d;
-    font-weight: 750;
-}
-
-
-/* ===== TECHNOLOGIES ===== */
-
-.technology-section {
-    background: linear-gradient(135deg, #082b40, #12344d);
-}
-
-.technology-section .section-title h2 {
-    color: white;
-}
-
-.technology-section .section-title p {
-    color: rgba(255,255,255,.7);
-}
-
-.tech-card {
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.15);
-    color: white;
-    padding: 30px;
-    text-align: center;
-    border-radius: 15px;
-    height: 100%;
-}
-
-.tech-card i {
-    font-size: 45px;
-    color: #78e0d4;
-}
-
-.tech-card h5 {
-    margin-top: 15px;
-}
-
-
-/* ===== FOOTER ===== */
-
-footer {
-    background: #061d2c;
-    color: rgba(255,255,255,.7);
-    padding: 45px 5% 20px;
-}
-
-.footer-brand {
-    color: white;
-    font-size: 25px;
-    font-weight: 800;
-}
-
-.footer-brand i {
-    color: #78e0d4;
-}
-
-footer h5 {
-    color: white;
-}
-
-footer a {
-    display: block;
-    color: rgba(255,255,255,.65);
-    text-decoration: none;
-    margin: 8px 0;
-}
-
-footer a:hover {
-    color: #78e0d4;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,.1);
-    margin-top: 30px;
-    padding-top: 20px;
-    text-align: center;
-}
-
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width: 768px) {
-
-    .hero {
-        padding: 55px 20px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-card {
-        margin-top: 25px;
-    }
-
-    .section {
-        padding: 55px 20px;
-    }
-
-    .form-area {
-        padding: 25px 18px;
-    }
-
-    .registration-sidebar {
-        padding: 30px 22px;
-    }
-}
-
-</style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-    <div class="container">
-        <span><i class="bi bi-clock"></i> Patient Support Available 24/7</span>
-        <span><i class="bi bi-telephone-fill"></i> Emergency: 108</span>
-    </div>
-</div>
+    <!-- ================= NAVBAR ================= -->
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg sticky-top">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-heart-pulse-fill"></i>
+                CarePlus
+            </a>
 
-<div class="container-fluid">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
 
-<a class="navbar-brand" href="#home">
-    <i class="bi bi-heart-pulse-fill"></i>
-    <span>
-        MedCare
-        <small>ADVANCED HEALTHCARE</small>
-    </span>
-</a>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<button class="navbar-toggler"
-data-bs-toggle="collapse"
-data-bs-target="#navbar">
-<span class="navbar-toggler-icon"></span>
-</button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
 
-<div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
 
-<ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
 
-<li class="nav-item">
-<a class="nav-link active" href="#home">Home</a>
-</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registration">
+                            Patient Registration
+                        </a>
+                    </li>
 
-<li class="nav-item">
-<a class="nav-link" href="#registration">Patient Registration</a>
-</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#appointments">
+                            Appointments
+                        </a>
+                    </li>
 
-<li class="nav-item">
-<a class="nav-link" href="#appointments">Appointments</a>
-</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#health">
+                            Health Information
+                        </a>
+                    </li>
 
-<li class="nav-item">
-<a class="nav-link" href="#health">Health Information</a>
-</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            Services
+                        </a>
+                    </li>
 
-<li class="nav-item">
-<a class="nav-link" href="#services">Services</a>
-</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technologies">
+                            Technologies
+                        </a>
+                    </li>
 
-<li class="nav-item">
-<a class="nav-link" href="#technologies">Technologies</a>
-</li>
+                </ul>
 
-</ul>
+            </div>
+        </div>
+    </nav>
 
-</div>
-</div>
-</nav>
 
+    <!-- ================= HOME ================= -->
 
-<!-- HERO -->
-<section class="hero" id="home">
+    <section id="home" class="hero-section">
 
-<div class="container">
+        <div class="container">
 
-<div class="row align-items-center g-5">
+            <div class="row align-items-center">
 
-<div class="col-lg-7">
+                <div class="col-lg-7">
 
-<span class="hero-badge">
-<i class="bi bi-shield-check"></i>
-PATIENT CARE PORTAL
-</span>
+                    <span class="badge bg-light text-primary mb-3">
+                        Healthcare Appointment Portal
+                    </span>
 
-<h1>Your Health Journey Starts Here.</h1>
+                    <h1 class="display-4 fw-bold">
+                        Your Health,
+                        <span class="text-primary">Our Priority</span>
+                    </h1>
 
-<p>
-Register with MedCare Hospital and manage your healthcare
-appointments through our patient portal.
-</p>
+                    <p class="lead mt-3">
+                        Book your healthcare appointment easily and
+                        manage your patient information in one place.
+                    </p>
 
-<ul class="hero-list">
+                    <a href="#registration"
+                        class="btn btn-primary btn-lg me-2">
+                        Book Appointment
+                    </a>
 
-<li>
-<i class="bi bi-check-circle-fill"></i>
-Secure Patient Registration
-</li>
+                    <a href="#services"
+                        class="btn btn-outline-primary btn-lg">
+                        Our Services
+                    </a>
 
-<li>
-<i class="bi bi-check-circle-fill"></i>
-Specialist Consultation
-</li>
+                </div>
 
-<li>
-<i class="bi bi-check-circle-fill"></i>
-Convenient Appointment Scheduling
-</li>
+                <div class="col-lg-5 text-center mt-4 mt-lg-0">
 
-</ul>
+                    <div class="hero-icon">
+                        <i class="bi bi-hospital"></i>
+                    </div>
 
-</div>
+                </div>
 
+            </div>
 
-<div class="col-lg-5">
+        </div>
 
-<div class="hero-card">
+    </section>
 
-<i class="bi bi-heart-pulse-fill fs-1"></i>
 
-<h3 class="mt-3">
-Complete Your Registration
-</h3>
+    <!-- ================= REGISTRATION ================= -->
 
-<p>
-Please provide accurate information so that our healthcare
-team can assist you effectively.
-</p>
+    <section id="registration" class="section-padding">
 
-<p>
-<i class="bi bi-clock"></i>
-24/7 Support
-</p>
+        <div class="container">
 
-<p>
-<i class="bi bi-shield-lock"></i>
-Private Information
-</p>
+            <div class="section-title">
+                <h2>Patient Registration</h2>
 
-<p>
-<i class="bi bi-person-check"></i>
-Patient Focused Care
-</p>
+                <p>
+                    Fill in the details to schedule your appointment.
+                </p>
+            </div>
 
-</div>
 
-</div>
+            <div class="card shadow border-0">
 
-</div>
-</div>
-</section>
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="bi bi-person-plus-fill"></i>
+                        Patient Details
+                    </h4>
+                </div>
 
 
-<!-- REGISTRATION -->
-<section class="section registration-section" id="registration">
+                <div class="card-body">
 
-<div class="container">
+                    <form>
 
-<div class="section-title">
+                        <!-- Personal Information -->
 
-<div class="subtitle">Patient Registration</div>
+                        <h5 class="form-heading">
+                            Personal Information
+                        </h5>
 
-<h2>Register for Healthcare Services</h2>
+                        <div class="row g-3">
 
-<p>
-Complete the information below to create your patient
-registration and appointment request.
-</p>
+                            <!-- Patient Name -->
 
-</div>
+                            <div class="col-md-6">
 
+                                <label for="patientName"
+                                    class="form-label">
+                                    Patient Name
+                                </label>
 
-<div class="registration-card">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="patientName"
+                                    placeholder="Enter patient name"
+                                    required>
 
-<div class="row g-0">
+                            </div>
 
 
-<!-- SIDEBAR -->
-<div class="col-lg-4">
+                            <!-- Email -->
 
-<div class="registration-sidebar">
+                            <div class="col-md-6">
 
-<i class="bi bi-hospital fs-1"></i>
+                                <label for="email"
+                                    class="form-label">
+                                    Email
+                                </label>
 
-<h3 class="mt-3">MedCare Hospital</h3>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="example@email.com"
+                                    required>
 
-<p class="subtitle">Advanced Healthcare</p>
+                            </div>
 
-<h5>Why register with us?</h5>
 
+                            <!-- Mobile -->
 
-<div class="sidebar-feature">
+                            <div class="col-md-6">
 
-<i class="bi bi-person-heart"></i>
+                                <label for="mobile"
+                                    class="form-label">
+                                    Mobile Number
+                                </label>
 
-<div>
-<strong>Patient-Centered Care</strong>
-<small>Healthcare services designed around individual patient needs.</small>
-</div>
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="mobile"
+                                    placeholder="Enter mobile number"
+                                    pattern="[0-9]{10}"
+                                    required>
 
-</div>
+                            </div>
 
 
-<div class="sidebar-feature">
+                            <!-- DOB -->
 
-<i class="bi bi-calendar-check"></i>
+                            <div class="col-md-6">
 
-<div>
-<strong>Easy Appointments</strong>
-<small>Submit appointment information conveniently.</small>
-</div>
+                                <label for="dob"
+                                    class="form-label">
+                                    Date of Birth
+                                </label>
 
-</div>
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="dob"
+                                    required>
 
+                            </div>
 
-<div class="sidebar-feature">
 
-<i class="bi bi-shield-check"></i>
+                            <!-- Gender -->
 
-<div>
-<strong>Secure Information</strong>
-<small>Structured collection of patient information.</small>
-</div>
+                            <div class="col-md-6">
 
-</div>
+                                <label for="gender"
+                                    class="form-label">
+                                    Gender
+                                </label>
 
+                                <select
+                                    class="form-select"
+                                    id="gender"
+                                    required>
 
-<div class="sidebar-feature">
+                                    <option value="">
+                                        Select Gender
+                                    </option>
 
-<i class="bi bi-people"></i>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
 
-<div>
-<strong>Healthcare Support</strong>
-<small>Access appointment and health information.</small>
-</div>
+                                </select>
 
-</div>
+                            </div>
 
-</div>
-</div>
 
+                            <!-- Blood Group -->
 
-<!-- FORM -->
-<div class="col-lg-8">
+                            <div class="col-md-6">
 
-<div class="form-area">
+                                <label for="bloodGroup"
+                                    class="form-label">
+                                    Blood Group
+                                </label>
 
-<div class="form-heading">
+                                <select
+                                    class="form-select"
+                                    id="bloodGroup"
+                                    required>
 
-<div class="form-icon">
-<i class="bi bi-person-plus-fill"></i>
-</div>
+                                    <option value="">
+                                        Select Blood Group
+                                    </option>
 
-<h2 class="mt-3">Patient Registration Form</h2>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
 
-<p>Enter your details and appointment information below.</p>
+                                </select>
 
-</div>
+                            </div>
 
+                        </div>
 
-<form>
 
+                        <!-- Appointment Information -->
 
-<!-- PERSONAL -->
-<div class="form-section-card">
+                        <h5 class="form-heading mt-5">
+                            Appointment Information
+                        </h5>
 
-<h5>
-<i class="bi bi-person-vcard"></i>
-Personal Information
-</h5>
+                        <div class="row g-3">
 
-<div class="row g-4">
+                            <!-- Department -->
 
-<div class="col-md-6">
-<label class="form-label">Patient Name</label>
-<input type="text" class="form-control"
-placeholder="Enter patient name" required>
-</div>
+                            <div class="col-md-6">
 
-<div class="col-md-6">
-<label class="form-label">Email</label>
-<input type="email" class="form-control"
-placeholder="Enter email address" required>
-</div>
+                                <label for="department"
+                                    class="form-label">
+                                    Department
+                                </label>
 
-<div class="col-md-6">
-<label class="form-label">Mobile Number</label>
-<input type="tel" class="form-control"
-placeholder="Enter mobile number"
-pattern="[0-9]{10}" required>
-</div>
+                                <select
+                                    class="form-select"
+                                    id="department"
+                                    required>
 
-<div class="col-md-6">
-<label class="form-label">Date of Birth</label>
-<input type="date" class="form-control" required>
-</div>
+                                    <option value="">
+                                        Select Department
+                                    </option>
 
-<div class="col-md-6">
-<label class="form-label">Gender</label>
-<select class="form-select" required>
-<option value="">Select Gender</option>
-<option>Male</option>
-<option>Female</option>
-<option>Other</option>
-</select>
-</div>
+                                    <option>General Medicine</option>
+                                    <option>Cardiology</option>
+                                    <option>Dermatology</option>
+                                    <option>Neurology</option>
+                                    <option>Pediatrics</option>
+                                    <option>Orthopedics</option>
 
-<div class="col-md-6">
-<label class="form-label">Blood Group</label>
-<select class="form-select" required>
-<option value="">Select Blood Group</option>
-<option>A+</option>
-<option>A-</option>
-<option>B+</option>
-<option>B-</option>
-<option>AB+</option>
-<option>AB-</option>
-<option>O+</option>
-<option>O-</option>
-</select>
-</div>
+                                </select>
 
-</div>
-</div>
+                            </div>
 
 
-<!-- APPOINTMENT -->
-<div class="form-section-card">
+                            <!-- Doctor -->
 
-<h5>
-<i class="bi bi-calendar2-week"></i>
-Appointment Information
-</h5>
+                            <div class="col-md-6">
 
-<div class="row g-4">
+                                <label for="doctor"
+                                    class="form-label">
+                                    Doctor Selection
+                                </label>
 
-<div class="col-md-6">
-<label class="form-label">Department</label>
+                                <select
+                                    class="form-select"
+                                    id="doctor"
+                                    required>
 
-<select class="form-select" required>
-<option value="">Select Department</option>
-<option>General Medicine</option>
-<option>Cardiology</option>
-<option>Dermatology</option>
-<option>Pediatrics</option>
-<option>Orthopedics</option>
-<option>Neurology</option>
-</select>
-</div>
+                                    <option value="">
+                                        Select Doctor
+                                    </option>
 
-<div class="col-md-6">
-<label class="form-label">Doctor Selection</label>
+                                    <option>Dr. Arun Kumar</option>
+                                    <option>Dr. Priya Sharma</option>
+                                    <option>Dr. Rahul Reddy</option>
+                                    <option>Dr. Sneha Rao</option>
 
-<select class="form-select" required>
-<option value="">Select Doctor</option>
-<option>Choose Doctor</option>
-</select>
-</div>
+                                </select>
 
-<div class="col-md-6">
-<label class="form-label">Appointment Date</label>
-<input type="date" class="form-control" required>
-</div>
+                            </div>
 
-<div class="col-md-6">
-<label class="form-label">Appointment Time</label>
-<input type="time" class="form-control" required>
-</div>
 
-</div>
-</div>
+                            <!-- Appointment Date -->
 
+                            <div class="col-md-6">
 
-<!-- HEALTH -->
-<div class="form-section-card">
+                                <label for="appointmentDate"
+                                    class="form-label">
+                                    Appointment Date
+                                </label>
 
-<h5>
-<i class="bi bi-clipboard2-pulse"></i>
-Health Information
-</h5>
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="appointmentDate"
+                                    required>
 
-<div class="row g-4">
+                            </div>
 
-<div class="col-12">
 
-<label class="form-label">Address</label>
+                            <!-- Appointment Time -->
 
-<textarea class="form-control"
-placeholder="Enter your address"
-required></textarea>
+                            <div class="col-md-6">
 
-</div>
+                                <label for="appointmentTime"
+                                    class="form-label">
+                                    Appointment Time
+                                </label>
 
+                                <input
+                                    type="time"
+                                    class="form-control"
+                                    id="appointmentTime"
+                                    required>
 
-<div class="col-12">
+                            </div>
 
-<label class="form-label">
-Symptoms / Health Concern
-</label>
 
-<textarea class="form-control"
-placeholder="Describe your symptoms or health concern"
-required></textarea>
+                            <!-- Address -->
 
-</div>
+                            <div class="col-12">
 
-</div>
-</div>
+                                <label for="address"
+                                    class="form-label">
+                                    Address
+                                </label>
 
+                                <textarea
+                                    class="form-control"
+                                    id="address"
+                                    rows="3"
+                                    placeholder="Enter your address"
+                                    required></textarea>
 
-<button type="submit" class="btn btn-primary me-2">
-<i class="bi bi-check-circle"></i>
-Register
-</button>
+                            </div>
 
-<button type="reset" class="btn btn-outline-secondary">
-<i class="bi bi-arrow-counterclockwise"></i>
-Reset
-</button>
 
-</form>
+                            <!-- Symptoms -->
 
-</div>
-</div>
+                            <div class="col-12">
 
-</div>
-</div>
-</div>
-</section>
+                                <label for="symptoms"
+                                    class="form-label">
+                                    Symptoms / Health Concern
+                                </label>
 
+                                <textarea
+                                    class="form-control"
+                                    id="symptoms"
+                                    rows="4"
+                                    placeholder="Describe your symptoms or health concern"
+                                    required></textarea>
 
-<!-- APPOINTMENTS -->
-<section class="section appointment-section" id="appointments">
+                            </div>
 
-<div class="container">
+                        </div>
 
-<div class="section-title">
 
-<div class="subtitle">Appointment Section</div>
+                        <!-- Buttons -->
 
-<h2>Appointments</h2>
+                        <div class="mt-4">
 
-<p>
-View patient appointment details and appointment status.
-</p>
+                            <button
+                                type="submit"
+                                class="btn btn-primary me-2">
 
-</div>
+                                <i class="bi bi-check-circle"></i>
+                                Register
 
+                            </button>
 
-<div class="table-card">
 
-<div class="table-responsive">
+                            <button
+                                type="reset"
+                                class="btn btn-outline-secondary">
 
-<table class="table mb-0">
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                                Reset
 
-<thead>
+                            </button>
 
-<tr>
-<th>Appointment ID</th>
-<th>Patient Name</th>
-<th>Department</th>
-<th>Doctor</th>
-<th>Date</th>
-<th>Time</th>
-<th>Appointment Status</th>
-</tr>
+                        </div>
 
-</thead>
+                    </form>
 
-<tbody>
+                </div>
 
-<tr>
+            </div>
 
-<td colspan="7" class="empty-table">
+        </div>
 
-<i class="bi bi-calendar-x"></i>
+    </section>
 
-No appointment records available.
 
-</td>
+    <!-- ================= APPOINTMENTS ================= -->
 
-</tr>
+    <section id="appointments"
+        class="section-padding bg-light">
 
-</tbody>
+        <div class="container">
 
-</table>
+            <div class="section-title">
 
-</div>
-</div>
+                <h2>Appointments</h2>
 
-</div>
-</section>
+                <p>
+                    View scheduled patient appointments.
+                </p>
 
+            </div>
 
-<!-- HEALTH INFORMATION -->
-<section class="section health-section" id="health">
 
-<div class="container">
+            <div class="card shadow border-0">
 
-<div class="section-title">
+                <div class="card-body">
 
-<div class="subtitle">Health Information</div>
+                    <div class="table-responsive">
 
-<h2>Patient Health Information</h2>
+                        <table class="table table-hover align-middle">
 
-<p>
-Patient health and appointment information will appear here
-after registration.
-</p>
+                            <thead class="table-primary">
 
-</div>
+                                <tr>
 
+                                    <th>Appointment ID</th>
+                                    <th>Patient Name</th>
+                                    <th>Department</th>
+                                    <th>Doctor</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
 
-<div class="health-card">
+                                </tr>
 
-<div class="row g-4">
+                            </thead>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Patient Name</span>
-<strong>—</strong>
-</div>
-</div>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Blood Group</span>
-<strong>—</strong>
-</div>
-</div>
+                            <tbody>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Department</span>
-<strong>—</strong>
-</div>
-</div>
+                                <tr>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Doctor</span>
-<strong>—</strong>
-</div>
-</div>
+                                    <td>APT001</td>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Appointment Date</span>
-<strong>—</strong>
-</div>
-</div>
+                                    <td>Rahul Kumar</td>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Appointment Time</span>
-<strong>—</strong>
-</div>
-</div>
+                                    <td>Cardiology</td>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Symptoms</span>
-<strong>—</strong>
-</div>
-</div>
+                                    <td>Dr. Arun Kumar</td>
 
-<div class="col-md-6">
-<div class="health-info-item">
-<span>Appointment Status</span>
-<strong>—</strong>
-</div>
-</div>
+                                    <td>10-10-2026</td>
 
-</div>
-</div>
+                                    <td>10:30 AM</td>
 
-</div>
-</section>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Confirmed
+                                        </span>
+                                    </td>
 
+                                </tr>
 
-<!-- SERVICES -->
-<section class="section services-section" id="services">
 
-<div class="container">
+                                <tr>
 
-<div class="section-title">
+                                    <td>APT002</td>
 
-<div class="subtitle">Healthcare Services</div>
+                                    <td>Anjali Sharma</td>
 
-<h2>Our Services</h2>
+                                    <td>Dermatology</td>
 
-<p>
-Healthcare portal features for patient registration
-and appointment management.
-</p>
+                                    <td>Dr. Priya Sharma</td>
 
-</div>
+                                    <td>12-10-2026</td>
 
+                                    <td>11:00 AM</td>
 
-<div class="row g-4">
+                                    <td>
+                                        <span class="badge bg-warning text-dark">
+                                            Pending
+                                        </span>
+                                    </td>
 
-<div class="col-md-4">
+                                </tr>
 
-<div class="service-card">
 
-<div class="service-icon">
-<i class="bi bi-person-plus"></i>
-</div>
+                                <tr>
 
-<h4>Patient Registration</h4>
+                                    <td>APT003</td>
 
-<p>
-Register patient information through a structured
-healthcare registration form.
-</p>
+                                    <td>Vijay Rao</td>
 
-</div>
+                                    <td>Orthopedics</td>
 
-</div>
+                                    <td>Dr. Rahul Reddy</td>
 
+                                    <td>15-10-2026</td>
 
-<div class="col-md-4">
+                                    <td>02:00 PM</td>
 
-<div class="service-card">
+                                    <td>
+                                        <span class="badge bg-danger">
+                                            Cancelled
+                                        </span>
+                                    </td>
 
-<div class="service-icon">
-<i class="bi bi-calendar-check"></i>
-</div>
+                                </tr>
 
-<h4>Appointment Scheduling</h4>
+                            </tbody>
 
-<p>
-Submit department, doctor, date and time information
-for appointments.
-</p>
+                        </table>
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
+            </div>
 
-<div class="col-md-4">
+        </div>
 
-<div class="service-card">
+    </section>
 
-<div class="service-icon">
-<i class="bi bi-clipboard2-pulse"></i>
-</div>
 
-<h4>Health Information</h4>
+    <!-- ================= HEALTH INFORMATION ================= -->
 
-<p>
-Organize patient health and appointment information
-in one dedicated section.
-</p>
+    <section id="health" class="section-padding">
 
-</div>
+        <div class="container">
 
-</div>
+            <div class="section-title">
 
-</div>
-</div>
-</section>
+                <h2>Health Information</h2>
 
+                <p>
+                    Patient appointment and health details.
+                </p>
 
-<!-- TECHNOLOGIES -->
-<section class="section technology-section" id="technologies">
+            </div>
 
-<div class="container">
 
-<div class="section-title">
+            <div class="row g-4">
 
-<div class="subtitle">Project Technologies</div>
 
-<h2>Technologies Used</h2>
+                <div class="col-md-6">
 
-<p>
-The healthcare portal is developed using the following
-web technologies.
-</p>
+                    <div class="card health-card shadow-sm h-100">
 
-</div>
+                        <div class="card-body">
 
+                            <h5 class="card-title">
+                                <i class="bi bi-person-circle"></i>
+                                Patient Information
+                            </h5>
 
-<div class="row g-4">
+                            <hr>
 
-<div class="col-md-4">
+                            <p>
+                                <strong>Patient Name:</strong>
+                                Rahul Kumar
+                            </p>
 
-<div class="tech-card">
+                            <p>
+                                <strong>Blood Group:</strong>
+                                O+
+                            </p>
 
-<i class="bi bi-filetype-html"></i>
+                            <p>
+                                <strong>Department:</strong>
+                                Cardiology
+                            </p>
 
-<h5>HTML5</h5>
+                            <p>
+                                <strong>Doctor:</strong>
+                                Dr. Arun Kumar
+                            </p>
 
-<p>Structure and semantic content of the portal.</p>
+                        </div>
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
 
-<div class="col-md-4">
+                <div class="col-md-6">
 
-<div class="tech-card">
+                    <div class="card health-card shadow-sm h-100">
 
-<i class="bi bi-filetype-css"></i>
+                        <div class="card-body">
 
-<h5>CSS3</h5>
+                            <h5 class="card-title">
+                                <i class="bi bi-calendar-check"></i>
+                                Appointment Information
+                            </h5>
 
-<p>Styling, layout, colors and responsive design.</p>
+                            <hr>
 
-</div>
+                            <p>
+                                <strong>Appointment Date:</strong>
+                                10-10-2026
+                            </p>
 
-</div>
+                            <p>
+                                <strong>Appointment Time:</strong>
+                                10:30 AM
+                            </p>
 
+                            <p>
+                                <strong>Symptoms:</strong>
+                                Chest discomfort and fatigue
+                            </p>
 
-<div class="col-md-4">
+                            <p>
+                                <strong>Status:</strong>
 
-<div class="tech-card">
+                                <span class="badge bg-success">
+                                    Confirmed
+                                </span>
 
-<i class="bi bi-bootstrap"></i>
+                            </p>
 
-<h5>Bootstrap 5</h5>
+                        </div>
 
-<p>Responsive components, forms, cards and tables.</p>
+                    </div>
 
-</div>
+                </div>
 
-</div>
 
-</div>
-</div>
-</section>
+            </div>
 
+        </div>
 
-<!-- FOOTER -->
-<footer>
+    </section>
 
-<div class="container">
 
-<div class="row g-4">
+    <!-- ================= SERVICES ================= -->
 
-<div class="col-lg-6">
+    <section id="services"
+        class="section-padding bg-light">
 
-<div class="footer-brand">
-<i class="bi bi-heart-pulse-fill"></i>
-MedCare Hospital
-</div>
+        <div class="container">
 
-<p class="mt-3">
-Advanced Healthcare
-</p>
+            <div class="section-title">
 
-<p>
-Healthcare Appointment & Patient Portal
-</p>
+                <h2>Our Services</h2>
 
-</div>
+                <p>
+                    Healthcare services available through our portal.
+                </p>
 
+            </div>
 
-<div class="col-md-3">
 
-<h5>Quick Links</h5>
+            <div class="row g-4">
 
-<a href="#home">Home</a>
-<a href="#registration">Patient Registration</a>
-<a href="#appointments">Appointments</a>
-<a href="#health">Health Information</a>
 
-</div>
+                <div class="col-md-4">
 
+                    <div class="card service-card h-100 shadow-sm">
 
-<div class="col-md-3">
+                        <div class="card-body text-center">
 
-<h5>Portal</h5>
+                            <i class="bi bi-calendar2-check service-icon"></i>
 
-<a href="#services">Services</a>
-<a href="#technologies">Technologies</a>
+                            <h5 class="mt-3">
+                                Appointment Booking
+                            </h5>
 
-</div>
+                            <p>
+                                Schedule your healthcare appointment
+                                conveniently.
+                            </p>
 
-</div>
+                        </div>
 
+                    </div>
 
-<div class="footer-bottom">
+                </div>
 
-© 2026 MedCare Hospital | Healthcare Appointment & Patient Portal
 
-</div>
+                <div class="col-md-4">
 
-</div>
-</footer>
+                    <div class="card service-card h-100 shadow-sm">
 
+                        <div class="card-body text-center">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                            <i class="bi bi-heart-pulse service-icon"></i>
+
+                            <h5 class="mt-3">
+                                Health Information
+                            </h5>
+
+                            <p>
+                                Access important appointment and
+                                health-related information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card service-card h-100 shadow-sm">
+
+                        <div class="card-body text-center">
+
+                            <i class="bi bi-person-vcard service-icon"></i>
+
+                            <h5 class="mt-3">
+                                Patient Management
+                            </h5>
+
+                            <p>
+                                Maintain organized patient registration
+                                information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TECHNOLOGIES ================= -->
+
+    <section id="technologies"
+        class="section-padding">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Technologies Used</h2>
+
+                <p>
+                    Technologies used to develop this project.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-4">
+
+                    <div class="tech-card text-center">
+
+                        <i class="bi bi-filetype-html"></i>
+
+                        <h4>HTML5</h4>
+
+                        <p>
+                            Used to structure the healthcare portal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="tech-card text-center">
+
+                        <i class="bi bi-filetype-css"></i>
+
+                        <h4>CSS3</h4>
+
+                        <p>
+                            Used for styling, layout and responsiveness.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="tech-card text-center">
+
+                        <i class="bi bi-bootstrap-fill"></i>
+
+                        <h4>Bootstrap 5</h4>
+
+                        <p>
+                            Used for responsive layouts and UI components.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <div class="container">
+
+            <h5>
+                <i class="bi bi-heart-pulse-fill"></i>
+                CarePlus Healthcare Portal
+            </h5>
+
+            <p class="mb-0">
+                Healthcare Appointment & Patient Portal
+            </p>
+
+            <small>
+                Developed using HTML5, CSS3 and Bootstrap 5
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 </body>
+
 </html>

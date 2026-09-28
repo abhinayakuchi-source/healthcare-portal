@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Healthcare Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <!-- Home Section -->
+  <section id="home" class="text-center pt-5 mt-5">
+    <div class="container">
+      <h1 class="text-primary mb-4">Healthcare Portal</h1>
+      <p class="lead">Choose a section to continue:</p>
+
+      <div class="d-grid gap-3 col-6 mx-auto">
+        <a href="#registration" class="btn btn-success btn-lg">Patient Registration</a>
+        <a href="#appointments" class="btn btn-warning btn-lg">Appointments</a>
+        <a href="#healthinfo" class="btn btn-info btn-lg">Health Information</a>
+        <a href="#services" class="btn btn-secondary btn-lg">Services</a>
+        <a href="#technologies" class="btn btn-dark btn-lg">Technologies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="registration" class="pt-5 mt-5">
+    <div class="container">
+      <h2 class="text-primary">Patient Registration</h2>
+      <form id="patientForm" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Patient Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Mobile Number</label>
+          <input type="tel" class="form-control" id="mobile" pattern="[0-9]{10}" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="dob" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Department</label>
+          <select class="form-select" id="department" required>
+            <option value="">Select</option>
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Orthopedics</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Doctor</label>
+          <select class="form-select" id="doctor" required>
+            <option value="">Select</option>
+            <option>Dr. Kumar</option>
+            <option>Dr. Priya</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Appointment Date</label>
+          <input type="date" class="form-control" id="appDate" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Appointment Time</label>
+          <input type="time" class="form-control" id="appTime" required>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label">Symptoms</label>
+          <textarea class="form-control" id="symptoms" rows="2" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-success">Register</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Appointments Section -->
+  <section id="appointments" class="pt-5 mt-5">
+    <div class="container">
+      <h2 class="text-primary">Appointments</h2>
+      <table class="table table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th>ID</th><th>Patient Name</th><th>Department</th><th>Doctor</th><th>Date</th><th>Time</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="appointmentTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Health Information Section -->
+  <section id="healthinfo" class="pt-5 mt-5">
+    <div class="container">
+      <h2 class="text-primary">Health Information</h2>
+      <div id="healthInfo"></div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="pt-5 mt-5">
+    <div class="container">
+      <h2 class="text-primary">Services</h2>
+      <p>Cardiology, Neurology, Orthopedics, General Medicine...</p>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section id="technologies" class="pt-5 mt-5">
+    <div class="container">
+      <h2 class="text-primary">Technologies</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Bootstrap 5</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    const form = document.getElementById('patientForm');
+    const appointmentTable = document.getElementById('appointmentTable');
+    const healthInfo = document.getElementById('healthInfo');
+    let appointmentId = 1;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const department = document.getElementById('department').value;
+      const doctor = document.getElementById('doctor').value;
+      const date = document.getElementById('appDate').value;
+      const time = document.getElementById('appTime').value;
+      const symptoms = document.getElementById('symptoms').value;
+
+      // Add to appointment table
+      appointmentTable.innerHTML += `
+        <tr>
+          <td>${appointmentId++}</td>
+          <td>${name}</td>
+          <td>${department}</td>
+          <td>${doctor}</td>
+          <td>${date}</td>
+          <td>${time}</td>
+          <td>Confirmed</td>
+        </tr>`;
+
+      // Update health info
+      healthInfo.innerHTML = `
+        <p><strong>Patient Name:</strong> ${name}</p>
+        <p><strong>Department:</strong> ${department}</p>
+        <p><strong>Doctor:</strong> ${doctor}</p>
+        <p><strong>Appointment Date:</strong> ${date}</p>
+        <p><strong>Appointment Time:</strong> ${time}</p>
+        <p><strong>Symptoms:</strong> ${symptoms}</p>
+        <p><strong>Status:</strong> Confirmed</p>`;
+    });
+  </script>
+</body>
+</html>

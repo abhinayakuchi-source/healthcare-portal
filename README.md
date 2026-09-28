@@ -4,7 +4,7 @@ A responsive Healthcare Appointment & Patient Portal developed using HTML5, CSS3
 
 ## Demo
 
-https://abhinayakuchi-source.github.io/healthcare-appointment-patient-portal/
+https://abhinayakuchi-source.github.io/healthcare-portal/
 
 ## Features
 

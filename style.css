@@ -5,92 +5,105 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+    background-color: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+}
+
+.nav-link {
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
 }
 
 
 /* ================= HERO ================= */
 
 .hero-section {
-    background: linear-gradient(135deg, #0d6efd, #084298);
-    color: white;
-    padding: 100px 0;
-    min-height: 500px;
+    min-height: 550px;
     display: flex;
     align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d6efd,
+            #084298
+        );
+
+    color: white;
+
+    padding: 90px 0;
+}
+
+.hero-section h1 {
+    line-height: 1.2;
+}
+
+.hero-section p {
+    max-width: 700px;
 }
 
 .hero-icon {
-    font-size: 170px;
+    font-size: 180px;
     opacity: 0.9;
-}
-
-
-/* ================= SERVICES ================= */
-
-.service-card {
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    height: 100%;
-    transition: 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-}
-
-.service-icon {
-    font-size: 50px;
-    color: #0d6efd;
 }
 
 
 /* ================= SECTION ================= */
 
-.section-light {
-    background: #f5f8fc;
-}
-
-
-/* ================= DOCTORS ================= */
-
-.doctor-card {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
-
-.doctor-card:hover {
-    transform: translateY(-8px);
-}
-
-.doctor-icon {
-    background: #e8f1ff;
+.section-heading h2 {
+    font-weight: 700;
     color: #0d6efd;
-    font-size: 90px;
-    text-align: center;
-    padding: 25px;
+}
+
+.section-heading p {
+    color: #6c757d;
 }
 
 
 /* ================= REGISTRATION ================= */
 
-.registration-section {
-    background: #f5f8fc;
-}
-
-.registration-section .card {
+.registration-card {
     border: none;
     border-radius: 15px;
+    overflow: hidden;
+}
+
+.registration-card .card-header {
+    padding: 18px 25px;
+}
+
+.registration-card .card-body {
+    background-color: #ffffff;
+}
+
+.form-label {
+    font-weight: 600;
 }
 
 .form-control,
 .form-select {
     min-height: 48px;
+    border-radius: 8px;
+}
+
+textarea.form-control {
+    min-height: auto;
 }
 
 .form-control:focus,
@@ -100,33 +113,129 @@ body {
 }
 
 
-/* ================= PATIENT DETAILS ================= */
+/* ================= SECTION BACKGROUND ================= */
+
+.section-light {
+    background-color: #f5f8fc;
+}
+
+
+/* ================= APPOINTMENT TABLE ================= */
+
+#appointments .card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#appointments .card-header {
+    padding: 18px 25px;
+}
 
 .table {
-    vertical-align: middle;
+    margin-bottom: 0;
 }
 
 .table th {
-    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
 }
 
 
-/* ================= CONTACT ================= */
+/* ================= HEALTH INFORMATION ================= */
 
-.contact-section {
-    background: #eaf3ff;
+.health-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.contact-icon {
-    font-size: 40px;
+.health-card .card-header {
+    padding: 18px 25px;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 18px;
+    height: 100%;
+}
+
+.info-box span {
+    display: block;
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.info-box strong {
+    color: #212529;
+    font-size: 17px;
+}
+
+.status-box {
+    border-left: 5px solid #198754;
+}
+
+
+/* ================= SERVICES ================= */
+
+.service-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-icon {
+    font-size: 50px;
     color: #0d6efd;
+}
+
+
+/* ================= TECHNOLOGIES ================= */
+
+.technology-card {
+    height: 100%;
+    padding: 35px 25px;
+
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.technology-card:hover {
+    transform: translateY(-7px);
+    border-color: #0d6efd;
+}
+
+.technology-card i {
+    font-size: 60px;
+    color: #0d6efd;
+}
+
+.technology-card h4 {
+    margin-top: 15px;
 }
 
 
 /* ================= FOOTER ================= */
 
 footer {
-    margin-top: 0;
+    padding: 30px 0;
 }
 
 
@@ -135,21 +244,42 @@ footer {
 @media (max-width: 768px) {
 
     .hero-section {
-        padding: 70px 0;
         text-align: center;
+        padding: 70px 0;
     }
 
     .hero-section h1 {
-        font-size: 38px;
+        font-size: 2.2rem;
     }
 
     .hero-icon {
         font-size: 100px;
+        margin-top: 30px;
     }
 
     .hero-section .btn {
-        margin-left: 0 !important;
-        margin-right: 5px;
+        margin: 5px !important;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 1.9rem;
+    }
+
+    .registration-card .card-body {
+        padding: 20px !important;
+    }
+
+    .hero-section .btn {
+        width: 100%;
+        margin: 5px 0 !important;
     }
 
 }

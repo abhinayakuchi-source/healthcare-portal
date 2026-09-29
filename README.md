@@ -509,9 +509,7 @@ https://abhinayakuchi-source.github.io/healthcare-portal/
 
 ---
 
-# 🖼️ Recommended Project Screenshots
-
-For a professional GitHub presentation, the repository README can include screenshots of the following sections.
+# 🖼️ Web page
 
 ## 🏠 Home Page
 
